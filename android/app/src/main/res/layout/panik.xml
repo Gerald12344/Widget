@@ -1,0 +1,24 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+    style="@style/Widget.AwesomeProject.AppWidget.Container" 
+    android:layout_width="match_parent" 
+    android:layout_height="match_parent" 
+    android:background="@android:drawable/arrow_down_float" 
+    android:backgroundTint="#00FFFFFF" 
+    android:backgroundTintMode="multiply" 
+    android:theme="@style/AppTheme.AppWidgetContainer">
+
+    <Button android:id="@+id/PANIKBUTTOn" 
+        android:layout_width="171dp" 
+        android:layout_height="92dp" 
+        android:layout_alignParentStart="false" 
+        android:layout_alignParentLeft="false" 
+        android:layout_alignParentTop="false" 
+        android:layout_alignParentRight="false" 
+        android:layout_alignParentBottom="false" 
+        android:backgroundTint="#FF0000" 
+        android:scaleX="1" 
+        android:scaleY="1" 
+        android:text="@string/PANIK" 
+        android:textColor="#FFFFFF" 
+        android:textSize="48sp"/>
+</RelativeLayout>
