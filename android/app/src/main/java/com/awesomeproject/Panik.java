@@ -15,14 +15,6 @@ public class Panik extends AppWidgetProvider {
 
 
 
-    @Override
-    public void onReceive(Context context, Intent intent) {
-        // Chain up to the super class so the onEnabled, etc callbacks get dispatched
-        super.onReceive(context, intent);
-    }
-
-
-    @Override
     public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
         super.onUpdate(context, appWidgetManager, appWidgetIds);
         Toast.makeText( context,"Setup!", Toast.LENGTH_SHORT).show();
@@ -32,17 +24,14 @@ public class Panik extends AppWidgetProvider {
         }
     }
 
-    private void updateAppWidget(Context context,
-                                 AppWidgetManager appWidgetManager,
-                                 int appWidgetId) {
+    private void updateAppWidget(Context context, AppWidgetManager appWidgetManager, int appWidgetId) {
 
 
-        RemoteViews views = new RemoteViews(context.getPackageName(),
-                R.layout.panik);
+        RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.panik);
 
 
         // Setup update button to send an update request as a pending intent.
-        Intent intentUpdate = new Intent(context, Panik.class);
+        Intent intentUpdate = new Intent(context, MyActivity.class);
 
         // The intent action must be an app widget update.
         intentUpdate.setAction(AppWidgetManager.ACTION_APPWIDGET_UPDATE);
@@ -63,14 +52,5 @@ public class Panik extends AppWidgetProvider {
         appWidgetManager.updateAppWidget(appWidgetId, views);
     }
 
-    @Override
-    public void onEnabled(Context context) {
-        //Toast.makeText( context,"neweer!", Toast.LENGTH_SHORT).show();
-        // Enter relevant functionality for when the first widget is created
-    }
 
-    @Override
-    public void onDisabled(Context context) {
-        // Enter relevant functionality for when the last widget is disabled
-    }
 }
